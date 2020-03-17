@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Turn-Based Game</title>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main>
+    <h1>Fight or Flight</h1>
+    <div class="main">
+      <!-- <div class="opener">
+        <h3>Welcome to Fight or Flight</h3>
+        <p>This is a two player game.</p>
+        <p>Players can move up to 3 squares in each direction, they can, however, not jump barricades or move
+          diagonally. A fight is initiated once the two players are being placed on adjacent sqaures.</p>
+        </p> Who ever manages to bring his opponents healtscore to 0 or under wins.</p>
+        Weapons are being placed randomly, each weapon is there only once and has a certain amount of
+        power points that can be used in a fight to lower the oponents healthscore.</p>
+
+        <button class="js-start-game">Start game</button>
+      </div> -->
+      <div class="board">
+
+        <div class="playerDisplay js-playerOne_fight active">
+          <div class="fight-view">
+            <h2>Player One</h2>
+            <div class="playerOne playerIcon"></div>
+            <p>weapon: <span class="js-pOneWeapon"></spanclass>wrench</span></p>
+            <p>power: <span class="js-pOneWeaponPower">10</span></p>
+            <p>Healthscore: <span class="js-pOneHealth">100</span></p>
+          </div>
+        </div>
+        <div id="game" class="grid-container"></div>
+        <div class="playerDisplay js-playerTwo_fight">
+          <div class="fight-view">
+            <h2>Player Two</h2>
+            <div class="playerTwo playerIcon"></div>
+            <p>weapon: <span class="js-pTwoWeapon"></spanclass>wrench</span></p>
+            <p>power: <span class="js-pTwoWeaponPower">10</span></p>
+            <p>Healthscore: <span class="js-pTwoHealth">100</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'simple-line-icons';
+  src: url('../fonts/Simple-Line-Icons.eot?v=2.4.0');
+  src: url('../fonts/Simple-Line-Icons.eot?v=2.4.0#iefix') format('embedded-opentype'), url('../fonts/Simple-Line-Icons.woff2?v=2.4.0') format('woff2'), url('../fonts/Simple-Line-Icons.ttf?v=2.4.0') format('truetype'), url('../fonts/Simple-Line-Icons.woff?v=2.4.0') format('woff'), url('../fonts/Simple-Line-Icons.svg?v=2.4.0#simple-line-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: arial;
+}
+
+.main {
+   border: 1px solid darkcyan;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.opener {
+  position: absolute;
+  top: 15%;
+  background: #0b5335;
+  color: white;
+  padding: 80px;
+  text-align: left;
+  max-width: 50vw;
+  z-index: 1;
+  box-shadow: inset 14px 14px 173px 45px rgba(0,0,0,0.75);
+}
+
+.opener button {
+  background: black;
+  cursor: pointer;
+  color: white;
+}
+
+.board {
+  display: flex;
+  justify-content: space-evenly;
+   border: 1px solid darkcyan;
+}
+
+.playerDisplay {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
+
+.grid-container {
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(10, 50px);
+  grid-template-columns: repeat(10, 50px);
+}
+
+.grid-item {
+  display: inline-block;
+  outline: 1px solid rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item.possible:hover {
+  background: lightcyan;
+}
+
+.blocked {
+  background: crimson;
+  box-shadow: inset 0 0 37px black;
+}
+
+.free {
+  background: rgba(0, 173, 255, 0);
+  box-shadow: inset 0 0 5px #23acc2;
+}
+
+.rocket, .fire, .thunderbolt, .wrench, .playerOne, .playerTwo {
+  font-family: 'simple-line-icons';
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rocket, .fire, .thunderbolt, .wrench {
+border: 1px solid #23acc2;
+box-shadow: inset 0px 0px 1px 5px #ffffff;
+}
+
+/* .rocket:hover, .fire:hover, .thunderbolt:hover, .wrench:hover {
+  box-shadow: inset 0px 0px 1px 5px lightcyan;
+}  */
+
+.wrench {
+  background: #f5da58;
+}
+
+.wrench:before {
+  content: "\e052";
+}
+
+.wrench.possible:hover {
+  box-shadow: inset 0px 0px 1px 5px #f5da58;
+}
+
+.rocket {
+  background: #EFAC4C;
+}
+
+.rocket:before {
+  content: "\e05c";
+}
+
+.rocket.possible:hover {
+  box-shadow: inset 0px 0px 1px 5px #EFAC4C;
+}
+
+.fire {
+  background: #eb6363;
+}
+
+.fire:before {
+  content: "\e01c";
+}
+
+.fire.possible:hover {
+  box-shadow: inset 0px 0px 1px 5px #eb6363;
+}
+
+.thunderbolt {
+  background: #aaf537;
+}
+
+.thunderbolt:before {
+  content: "\e020";
+}
+.thunderbolt.possible:hover {
+  box-shadow: inset 0px 0px 1px 5px #aaf537;
+}
+
+.playerOne:before {
+  content: "\e005";
+} 
+.playerTwo:before {
+  content: "\e005";
+}
+
+.playerIcon {
+  align-self: center;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  background: #a0ede175;
+}
+
+.fight_arena {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 20%;
+  width: 475px;
+  height: 200px;
+  z-index: 100;
+  background: #0b5c69e6;
+  color: #ffffff;
+  border-radius: 3px;
+}
+
+.fight-view {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  word-break: break-word;
+
+}
+
+.choiceForm {
+  width: 50%;
+  height: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  border-radius: 3px;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+button.attack {
+  background-color: darkred;
+}
+
+button.defend {
+  background-color: darkslategray;
+}
+
+button.restart {
+  background: greenyellow;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.win {
+  color: darkgoldenrod;
+  font-size: 20px;
+}
+
+.possible {
+  background: #8ddbe366;
+} 
+
+.playerOne {
+  background: lime;
+  box-shadow: none;
+}
+.playerTwo {
+  background: rgb(35, 102, 220);
+  box-shadow: none;
+}
+
