@@ -321,8 +321,10 @@ function checkWin() {
     });
 
   } else {
-    setTimeout(() =>
-      fightArena.classList.add('hidden'), 0500)
+
+    this.renderFightArena(isFirstFight)
+    // setTimeout(() =>
+    //   fightArena.classList.add('hidden'), 0500)
   }
 }
 // creates a random number between
